@@ -26,6 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency("yui-compressor",      "~>0.9.0")
   gem.add_dependency("haml",                "~>3.0")
   gem.add_dependency("compass",             "~>0.10.0")
+  gem.add_dependency("lemonade",            "~>0.3.4")
   gem.add_dependency("json_pure",           "~>1.4.0")
   gem.add_dependency("smusher",             "~>0.4.5")
   gem.add_dependency("compass-slickmap",    "~>0.4.0")
