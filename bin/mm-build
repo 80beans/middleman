@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 
-ENV['MM_ENV'] = "build"
-
+if ARGV[0] && ARGV[0] == 'preview'
+  ENV['MM_ENV'] = ARGV.shift
+else
+  ENV['MM_ENV'] = 'build'
+end
 # Require app
 require File.join(File.dirname(__FILE__), "..", "lib", "middleman")
 require 'middleman/builder'
