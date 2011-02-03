@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors  = ["Thomas Reynolds"]
   gem.email    = "tdreyno@gmail.com"
   gem.homepage = 'http://wiki.github.com/tdreyno/middleman'
-  gem.executables       = %w(mm-init mm-build mm-server)
+  gem.executables       = %w(mm-init mm-build mm-server mm-preview)
   gem.rubyforge_project = "middleman"
 
   gem.files = Dir['{generators,lib,spec,bin,features,fixtures}/**/*', 'README*', 'LICENSE*', 'Rakefile'] & `git ls-files -z`.split("\0")
@@ -25,7 +25,8 @@ Gem::Specification.new do |gem|
   gem.add_dependency("rack-test",           "~>0.5.0")
   gem.add_dependency("yui-compressor",      "~>0.9.0")
   gem.add_dependency("haml",                "~>3.0")
-  gem.add_dependency("compass",             "~>0.10.0")
+  gem.add_dependency("compass",             "~>0.11.beta")
+  gem.add_dependency("oily_png",            "~>0.0.5")
   gem.add_dependency("lemonade",            "~>0.3.4")
   gem.add_dependency("json_pure",           "~>1.4.0")
   gem.add_dependency("smusher",             "~>0.4.5")
