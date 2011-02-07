@@ -10,15 +10,16 @@ module Middleman::Features
   autoload :Slickmap,            "middleman/features/slickmap"
   autoload :SmushPNGs,           "middleman/features/smush_pngs"
   autoload :CodeRay,             "middleman/features/code_ray"
+  autoload :Partials,             "middleman/features/partials"
   # autoload :LiveReload,          "middleman/features/live_reload"
-  
+
   class << self
     def registered(app)
       app.extend ClassMethods
     end
     alias :included :registered
   end
-  
+
   module ClassMethods
     def activate(feature_name)
       mod_name = feature_name.to_s.camelize
@@ -26,7 +27,7 @@ module Middleman::Features
         register Middleman::Features.const_get(mod_name)
       end
     end
-    
+
     def enable(feature_name)
       $stderr.puts "Warning: Feature activation has been renamed from enable to activate"
       activate(feature_name)
