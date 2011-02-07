@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors  = ["Thomas Reynolds"]
   gem.email    = "tdreyno@gmail.com"
   gem.homepage = 'http://wiki.github.com/tdreyno/middleman'
-  gem.executables       = %w(mm-init mm-build mm-server)
+  gem.executables       = %w(mm-init mm-build mm-server mm-preview)
   gem.rubyforge_project = "middleman"
 
   gem.files = Dir['{generators,lib,spec,bin,features,fixtures}/**/*', 'README*', 'LICENSE*', 'Rakefile'] & `git ls-files -z`.split("\0")
