@@ -119,7 +119,7 @@ module Middleman
 
       old_layout = settings.current_layout
       settings.layout(options[:layout]) if !options[:layout].nil?
-      result = render(path, :layout => settings.fetch_layout_path.to_sym)
+      result = render(path, :layout => path.include?('stylesheets') ? false : settings.fetch_layout_path.to_sym)
       settings.layout(old_layout)
 
       if result

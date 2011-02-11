@@ -1,5 +1,5 @@
 Gem::Specification.new do |gem|
-  gem.name    = 'middleman'
+  gem.name    = 'beans-middleman'
   gem.version = '1.0.5'
   gem.date    = Date.today.to_s
 
@@ -26,7 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency("yui-compressor",      "~>0.9.0")
   gem.add_dependency("haml",                "~>3.0")
   gem.add_dependency("compass",             "~>0.11.beta")
-  gem.add_dependency("oily_png",            "~>0.0.5")
+  gem.add_dependency("oily_png",            "~>0.3.0")
   gem.add_dependency("lemonade",            "~>0.3.4")
   gem.add_dependency("json_pure",           "~>1.4.0")
   gem.add_dependency("smusher",             "~>0.4.5")
@@ -35,4 +35,3 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency("cucumber", "~>0.9.2")
   gem.add_development_dependency("rspec",    "~>2.0.0")
 end
-
