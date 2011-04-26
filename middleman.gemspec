@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name    = 'beans-middleman'
-  gem.version = '1.0.9'
+  gem.version = '1.0.10'
   gem.date    = Date.today.to_s
 
   gem.summary = "A static site generator utilizing Haml, Sass and providing YUI compression and cache busting."
@@ -25,6 +25,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency("rack-test",           "~>0.5.0")
   gem.add_dependency("yui-compressor",      "~>0.9.0")
   gem.add_dependency("haml",                "~>3.1")
+  gem.add_dependency("sass",                "~>3.1")
   gem.add_dependency("compass",             "~>0.11")
   gem.add_dependency("json_pure",           "~>1.4.0")
   gem.add_dependency("smusher",             "~>0.4.5")
