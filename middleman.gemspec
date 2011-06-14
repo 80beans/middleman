@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name    = 'beans-middleman'
-  gem.version = '1.0.11'
+  gem.version = '1.0.12'
   gem.date    = Date.today.to_s
 
   gem.summary = "A static site generator utilizing Haml, Sass and providing YUI compression and cache busting."
