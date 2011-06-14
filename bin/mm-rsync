@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require 'digest/md5'
+
+unless %w{preview delivery}.include? ARGV.first
+  puts "\e[31mPlease pass \"preview\" or \"delivery\" as the first argument.\e[0m"
+  exit
+end
+
+project_name = Dir.pwd.split('/').last
+digest = Digest::MD5.hexdigest project_name
+
+origin = "#{ARGV.first}#{ARGV.first == 'preview' ? '/*' : '.zip'}"
+destination = "#{ARGV.first}/#{digest}/"
+
+`rsync -glpPrtvz #{origin} slicecraft@slicecraft.nl:app/shared/#{destination}`
+
+if $? == 0
+  puts "\e[32mThe #{ARGV.first} was successfully rsync-ed to http://www.slicecraft.nl/#{destination}#{ARGV.first == 'preview' ? 'index.html' : 'delivery.zip'}.\e[0m"
+else
+  puts "\e[31mSomething went wrong while rsync-ing. Check the output for more information.\e[0m"
+end

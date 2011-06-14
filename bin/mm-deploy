@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+case ARGV.first
+when 'preview'
+  puts `mm-preview && mm-rsync preview`
+  `rm -rf preview`
+when 'delivery'
+  puts `mm-build && mm-rsync delivery`
+  `rm delivery.zip`
+else
+  puts "Unknown type \"#{ARGV[1]}\", please choose \"preview\" or \"delivery\"."
+end
